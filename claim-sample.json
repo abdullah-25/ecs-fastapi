@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "source_system": "mobile_app_v2",
+    "timestamp": "2026-01-14T20:15:00Z",
+    "correlation_id": "uuid-1234-5678-90ab"
+  },
+  "claim_details": {
+    "policy_number": "POL-99887766",
+    "claim_type": "auto_collision",
+    "incident_date": "2026-01-14",
+    "incident_location": {
+      "zip_code": "90210",
+      "state": "CA"
+    },
+    "description": "Rear-end collision at traffic light. Minor bumper damage."
+  },
+  "claimant": {
+    "id": "USR-4455",
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "phone": "+1-555-0199"
+  },
+  "estimated_loss": {
+    "amount": 1250.00,
+    "currency": "USD"
+  },
+  "attachments": [
+    {
+      "type": "image",
+      "s3_uri": "s3://insurance-claims-bucket/uploads/2026/01/14/photo1.jpg"
+    }
+  ]
+}
