@@ -17,22 +17,26 @@ The architecture follows a "Fire and Forget" pattern where the FastAPI container
 1. Local Development
 To run the container locally and connect to AWS, you must mount your local credentials:
 
-Bash
 
 # Build the image
+```
 docker build -t insurance-orchestrator .
 
+```
+
 # Run with environment variables
+```
 docker run -p 8000:8000 \
   -e STATE_MACHINE_ARN="your-arn-here" \
   -e AWS_REGION="your-region" \
   -v ~/.aws:/home/appuser/.aws:ro \
   insurance-orchestrator
+```
+
 2. Testing the API
 Submit a sample claim JSON via the CLI:
 
-Bash
-
+```
 curl -X POST "http://localhost:8000/orchestrate" \
      -H "Content-Type: application/json" \
      -d '{
@@ -42,6 +46,7 @@ curl -X POST "http://localhost:8000/orchestrate" \
           "estimated_loss": {"amount": 4500},
           "attachments": []
          }'
+```
 
 ## Infrastructure & Observability
 Health Check: GET /health.
