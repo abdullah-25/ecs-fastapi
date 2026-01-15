@@ -9,7 +9,7 @@ Capability: Claims Ingestion, Validation, and Notification.
 Stack: Python 3.11, FastAPI, Docker, AWS Fargate, AWS Step Functions.
 
 ## System Architecture
-(Insert your System Design Image here)
+![alt text](https://github.com/abdullah-25/ecs-fastapi/blob/main/assets/system-design.png?raw=true)
 
 The architecture follows a "Fire and Forget" pattern where the FastAPI container validates the initial request and delegates long-running business logic to a Standard Step Function workflow for full auditability.
 
